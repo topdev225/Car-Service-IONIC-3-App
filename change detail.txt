@@ -1,0 +1,31 @@
+changed detail
+
+
+
+1. controller/user_estimates.php/user_estimates():
+	change []->()
+
+2. contoller/login.php/login_check():
+	add session create
+	add userId
+
+3. Model/frontend/Model_user_vehicles.php/new_vehicle()
+	delete and change userId
+
+4. Model/frontend/Model_service_history.php/get_service_history
+	change userid
+
+5. Controller/User_my_account, Service_history, Controller/User_vehicles.php, Controller/User_estimates.php
+	header("Access-Control-Allow-Origin: *"); added
+	
+6. Controller/User_my_account/get_year_app() add
+7. Controller/User_estimates.php   save_order_app() function add
+8. Model/Model_user_estimates.php  save_order_info_app() function add
+
+question:
+
+1. fix bug
+2. profile page : email phone not change
+3. add a vehicle : select box(address), add functions in web because of adding at one time.
+4. mechanic page : how to log in with admin, page design, notify to customer order status when mechanic accept or refuse or other states.
+5. budget.

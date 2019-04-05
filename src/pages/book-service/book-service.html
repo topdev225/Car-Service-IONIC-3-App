@@ -1,0 +1,143 @@
+<!--
+  Generated template for the BookServicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>bookService</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<!---Settings TAB lauout-1-->
+<ion-content background-mech>
+  <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4>
+          <ion-card text-left>
+            <!--Card descriptiom-->
+            <ion-card-content>
+              <ion-card-title>
+                <!--Card Title-->
+                <h3 card-title-car>Select Car</h3>
+                <!--Card Subtitle-->
+                <ion-item>
+                    <!-- <ion-label>Choose Year</ion-label>
+                    <ion-select [(ngModel)]="data.selectedItem" multiple="false">
+                            <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">2017</ion-option>
+                    </ion-select> -->
+                    <ion-label>Select Car</ion-label>
+                    <ion-select multiple="false" interface="popover" [(ngModel)]="selectedVehicle" (ionChange)="carFn($event)">
+                        <ion-option *ngFor="let car of cars" [value] = "car">{{car.car_year}}-{{car.car_make}}-{{car.car_name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+              </ion-card-title>
+              <ion-card-title>
+                  <!--Card Title-->
+                  <h3 card-title-car>Choose Sevice</h3>
+                  <!--Card Subtitle-->
+                  <ion-item>
+                      <ion-checkbox [(ngModel)]="oilChecked" (ionChange)="oilState()"></ion-checkbox>
+                      <ion-label>Oil change</ion-label>
+                  </ion-item>
+                  <ion-item bottom-border>
+                      <ion-label>You provide oil and filter</ion-label>
+                      <ion-select multiple="false" interface="popover" id = "oilService" disabled = {{isEnabledOil}}>
+                              <ion-option>You provide oil and filter</ion-option>
+                      </ion-select>
+                  </ion-item>
+                  <ion-item>
+                      <ion-checkbox [(ngModel)]="brakeChecked" (ionChange)="brakeState()"></ion-checkbox>
+                      <ion-label>Brake Service</ion-label>
+                  </ion-item>
+                  <ion-item bottom-border>
+                      <ion-label>You provide brake oil and brake pad</ion-label>
+                      <ion-select multiple="false" interface="popover" id = "brakeService" disabled = {{isEnabledBrake}}>
+                              <ion-option>You provide brake oili and brake pad</ion-option>
+                      </ion-select>
+                  </ion-item>
+                  <ion-item bottom-border>
+                      <ion-label>Choose Engine oil</ion-label>
+                      <ion-select multiple="false" interface="popover" [(ngModel)]="selectedEngineOil" (ionChange)="engineFn()">
+                              <ion-option *ngFor="let oil of oils" [value] = "oil.id">{{oil.name}}</ion-option>
+                      </ion-select>
+                  </ion-item>
+                  <ion-item bottom-border>
+                      <ion-label>Date</ion-label>
+                      <!-- <ion-calendar [(ngModel)]="date"
+                                    (onChange)="onChange($event)"
+                                    [type]="type"
+                                    [format]="'YYYY-MM-DD'">
+                      </ion-calendar> -->
+                      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="selectServiceDate"></ion-datetime>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Time</ion-label>
+                      <ion-select multiple="false" interface="popover" [(ngModel)]="selectedTime">
+                          <ion-option>7am-9am</ion-option>
+                          <ion-option>9am-11am</ion-option>
+                          <ion-option>2pm-4pm</ion-option>
+                          <ion-option>4pm-6pm</ion-option>
+                      </ion-select>
+                  </ion-item>
+                </ion-card-title>
+                <ion-card-title radio-group [(ngModel)]="selectedAddress">
+                    <!--Card Title-->
+                    <h3 card-title-car>Select Address</h3>
+                    <!--Card Subtitle-->
+                    <ion-item>
+                        <ion-radio item-start value="default" (ionSelect)="defaultSel()"></ion-radio>
+                        <ion-label>
+                            Default Address :
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>                       
+                        <ion-label item-title>{{serviceAddressTemp}}</ion-label>  
+                    </ion-item>
+                    <ion-item>
+                        <ion-radio item-start value="alt" (ionSelect)="alterSel()"></ion-radio>
+                        <ion-label>
+                        Alternative Address :
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="text" placeholder="Enter your address" [(ngModel)]="altAddress" disabled = {{isEnabledAlt}}></ion-input>
+                    </ion-item>
+                  </ion-card-title>
+                  <ion-card-title radio-group [(ngModel)]="selectedPhonenumber">
+                    <!--Card Title-->
+                    <h3 card-title-car>Select Phone</h3>
+                    <!--Card Subtitle-->
+                    <ion-item>
+                        <ion-radio item-start value="defaultPhone" (ionSelect)="defaultPhoneSel()"></ion-radio>
+                        <ion-label>
+                            Default Phone :
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>                       
+                        <ion-label item-title>{{phoneNumber}}</ion-label>  
+                    </ion-item>
+                    <ion-item>
+                        <ion-radio item-start value="altPhone" (ionSelect)="alterPhoneSel()"></ion-radio>
+                        <ion-label>
+                        Alternative Phone :
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="text" placeholder="Enter your address" [(ngModel)]="altPhone" disabled = {{isEnabledPhoneAlt}}></ion-input>
+                    </ion-item>
+                  </ion-card-title>
+              <div class="block-next">
+                  <button ion-button default-button full text-capitalize (click) = "openModal()">GO SUMMARY</button>
+              </div>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

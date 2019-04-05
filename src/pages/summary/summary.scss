@@ -1,0 +1,14 @@
+page-summary {
+    [bottom-border]{
+        border-bottom: 1px dotted theme-colors('blendModes', 'primary') !important;
+    }
+    [top-border]{
+        border-top: 1px dotted theme-colors('blendModes', 'primary') !important;
+    }
+    [money]{
+        color: theme-colors('blendModes', 'primary') !important;
+    }
+    [total-money]{
+        color: rgb(255, 0, 0) !important;
+    }
+}

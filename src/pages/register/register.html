@@ -1,0 +1,69 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>regist</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--Content -->
+<ion-content>
+  <ion-grid no-padding>
+      <ion-row center>
+          <!-- Big Images Header -->
+          <ion-col no-padding col-12 background-size>
+              <!-- Header Title -->
+              <h1 ion-text color="light" header-title text-wrap>Register</h1>
+          </ion-col>
+          <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+              <!--Form-->
+              <ion-item>
+                  <!---Input field firstname-->
+                  <ion-label color="dark" stacked>FIRSTNAME</ion-label>
+                  <ion-input placeholder="What is your firstname?" type="text" [(ngModel)]="firstname" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field lastname-->
+                  <ion-label color="dark" stacked>LASTNAME</ion-label>
+                  <ion-input placeholder="What is your lastname?" type="text" [(ngModel)]="lastname" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field username-->
+                  <ion-label color="dark" stacked>USERNAME</ion-label>
+                  <ion-input placeholder="Enter your username" type="text" [(ngModel)]="username" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field password-->
+                  <ion-label color="dark" stacked>PASSWORD</ion-label>
+                  <ion-input placeholder="Enter your password" type="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field email-->
+                  <ion-label color="dark" stacked>E-MAIL</ion-label>
+                  <ion-input placeholder="Your e_mail address" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required [(ngModel)]="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field country-->
+                  <ion-label color="dark" stacked>PHONENUMBER</ion-label>
+                  <ion-input placeholder="What is your phonenumber?" type="text" required [(ngModel)]="phonenumber"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <!---Input field city-->
+                  <ion-label color="dark" stacked>ADDRESS</ion-label>
+                  <ion-input placeholder="Your address" type="text" required [(ngModel)]="address"></ion-input>
+              </ion-item>
+              <!---Register button-->
+              <ion-buttons end>
+                    <button ion-button margin default-button round text-capitalize (click)="onEvent('onLogin')">Login</button>
+                    <button ion-button margin default-button round text-capitalize (click)="onEvent('onRegister')">Register</button>
+              </ion-buttons>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

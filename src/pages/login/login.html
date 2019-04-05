@@ -1,0 +1,54 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<!-- Themes Login + logo 2 -->
+<ion-content has-header>
+  <ion-grid no-padding>
+    <ion-row padding-horizontal align-self-center>     
+      <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <!---Logo-->
+        <!-- <img [src]="data.logo"> -->
+        <img src="../../assets/images/logo/7.png">
+        <!---Logo Subtitle-->
+        <h2 login-subtitle no-margin>Welcome</h2>
+        <!---Logo Title-->
+        <h1 ion-text color="accent" login-title no-margin>Login to your account</h1>
+      </ion-col>
+      <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <!---Input field username-->
+        <ion-item no-padding margin-top>
+          <ion-label color="dark" stacked>USERNAME</ion-label>
+          <ion-input required type="text" placeholder="Enter your username" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <!---Input field password-->
+        <ion-item no-padding>
+          <ion-label color="dark" stacked>PASSWORD</ion-label>
+          <ion-input required type="password" placeholder="Enter your password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <button ion-button button-clear text-capitalize clear float-right (click)="onEvent('onForgot')">Forgot Password?</button>
+      </ion-col>
+      <!---Share Section-->
+      <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <!---Login button-->
+        <button ion-button default-button full text-capitalize (click)="onEvent('onLogin')">Login</button>
+        <!---Facebook button-->
+        <button ion-button default-button full color="secondary" text-capitalize block color="secondary"
+        (click)="onEvent('onFacebook')">Login with Facebook</button>
+      </ion-col>
+      <ion-col col-6 col-sm-6 col-md-6>
+        <p text-right>Don't have account?</p>
+      </ion-col>
+      <ion-col col-6 col-sm-6 col-md-6>
+        <button ion-button button-clear clear text-capitalize (click)="onEvent('onRegister')">Register</button>
+      </ion-col>
+      <!---End Share Section-->
+    </ion-row>
+  </ion-grid>
+</ion-content>

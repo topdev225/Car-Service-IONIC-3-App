@@ -1,0 +1,16 @@
+[menu-content] {
+    color: white;
+    background: url('../../assets/images/background/14.jpg') center no-repeat;
+    background-size:cover;
+  }
+[selected-item]{
+  font-family: BirchStd;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.1em;
+}
+ion-list .item:hover{
+  background-color : rgb(172, 170, 207);
+}

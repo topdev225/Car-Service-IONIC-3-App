@@ -1,0 +1,40 @@
+/*  #Style Register + Image
+================================================*/
+
+page-register {
+    [background-mech] {
+        background: url('../../assets/images/background/25.png') center no-repeat;
+        background-size:cover;
+        margin-left: 1em;
+    }
+    .scroll-content {
+      margin-top: 0 !important;
+    }
+    .back-button,
+    .toolbar-title {
+      color: theme-colors('textColors', 'secondaryBase') !important;
+    }
+    
+    ion-grid,
+    ion-row {
+        height: 100%;
+    }
+    [stacked] {
+        font-size: 10px !important;
+    }
+
+    // Settings Background Size
+    [background-size] {
+        height: 40%;
+        position: relative;
+        background-image: url("../../assets/images/background/24.jpg");
+        @include darkening-blend-mode;
+    }
+
+    // Header Title
+    [header-title] {
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+    }
+}

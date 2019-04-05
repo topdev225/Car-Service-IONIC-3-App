@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content background-mech>
+  <ion-grid no-padding>
+      <ion-row center>
+          <!-- Big Images Header -->
+          <ion-col no-padding col-12 background-size>
+                <!-- Header Title -->
+                <h1 ion-text color="light" header-title text-wrap>Who do you want to do?</h1>
+            </ion-col>
+          <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+            
+               <!--Form-->
+               <ion-item>
+                    <!---Input field firstname-->
+                    <ion-label color="dark" stacked>FIRST NAME</ion-label>
+                    <ion-input required placeholder="First Name" type="text" [(ngModel)]="firstName" required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <!---Input field lastname-->
+                    <ion-label color="dark" stacked>LAST NAME</ion-label>
+                    <ion-input required placeholder="Last Name" type="text" [(ngModel)]="lastName" required></ion-input>
+                </ion-item>
+                <ion-item>
+                        <!---Input field lastname-->
+                        <ion-label color="dark" stacked>USER NAME</ion-label>
+                        <ion-input required placeholder="User Name" type="text" [(ngModel)]="userName" required></ion-input>
+                    </ion-item>
+                <ion-item>
+                    <!---Input field password-->
+                    <ion-label color="dark" stacked>CHANGE PASSWORD</ion-label>
+                    <ion-input placeholder="Enter your new Password" type="password" [(ngModel)]="new" required></ion-input>
+                </ion-item> 
+                <ion-item>
+                        <!---Input field password-->
+                        <ion-label color="dark" stacked>CONFIRM PASSWORD</ion-label>
+                        <ion-input placeholder="Enter your new Password" type="password" [(ngModel)]="confirm" required></ion-input>
+                    </ion-item> 
+                <ion-item>
+                    <button ion-button margin full default-button round text-capitalize (click)="saveUserInfo()">Save</button>
+                </ion-item>
+                <ion-card text-left *ngFor="let car of cars">
+                    <ion-card-content >
+                            <ion-list tab-16>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">Car Make:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.car_make}}</p>
+                                </ion-item>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">car Year:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.car_year}}</p>
+                                </ion-item>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">Car Model:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.car_name}}</p>
+                                </ion-item>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">Car Trim:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.car_trim}}</p>
+                                </ion-item>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">VIN:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.vin}}</p>
+                                </ion-item>
+                                <ion-item>
+                                    <h6 item-start class="example-h5">Vehicle Registration:</h6>
+                                    <!--Card Subtitle-->
+                                    <p item-end class="example-p">{{car.registration_number}}</p>
+                                </ion-item>
+                            </ion-list>
+                    </ion-card-content>
+                </ion-card>
+                <ion-item>                                                        
+              <!---Update button-->
+                     <button ion-button margin full default-button round text-capitalize (click)="openModal()">Add a Vehicle</button>             
+                </ion-item>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

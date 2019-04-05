@@ -1,0 +1,63 @@
+
+/*  #Style Login + logo 1
+================================================*/
+@import "../../app/main.scss";
+
+page-login {
+    ion-grid,
+    ion-row {
+      height: 100%;
+    }
+  
+    .content {
+      color: white;
+      background: url('../../assets/images/splashscreen/4.png') center no-repeat;
+      background-size:cover;
+    }
+   
+    // Settings Logo
+    img {
+      max-width: 72px;
+      max-height: 72px;
+      //margin: auto !important;
+      margin: 24px auto;
+      display: block;
+    }
+  
+    [stacked] {
+      font-size: 10px !important;
+    }
+    .item-md {
+      color: white;
+      background-color: transparent;
+    }
+    [login-subtitle] {
+      font-size: 17px !important;
+      font-weight: 300;
+      color: white;
+  }
+  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: #3FB27F !important;
+  }
+  
+    p {
+      font-size: font-size-text('h5') !important;
+      line-height: 12px;
+      font-weight: 100;
+    }
+  
+    [button-clear] {
+      padding: 0 5px;
+    }
+    // Settings Button
+    [bottom-form] {
+      button:nth-child(1) {
+        margin: 12px 0;
+      }
+  
+      [default-button] {
+        font-weight: 400 !important;
+      }
+    }
+  }
+  

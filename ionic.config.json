@@ -1,0 +1,7 @@
+{
+  "name": "carservice",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

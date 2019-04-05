@@ -1,0 +1,42 @@
+page-book-service {
+
+    [background-mech] {
+            background: url('../../assets/images/background/25.png') center no-repeat;
+            background-size:cover;
+      }
+      // Settings Card
+      ion-card {
+        box-shadow: none !important;
+        border-radius: 10px !important;        
+    
+        [card-image] {
+          position: relative;
+    
+          ion-badge {
+            right: 65px;
+            bottom: 10px;
+            z-index: 3;
+            padding: 6px 15px !important;
+          }
+    
+          [button-action-shit] {
+            bottom: 6px;
+            right: 16px;
+          }
+        }
+        // Card Description
+        [card-subtitle] {
+          margin-bottom: 40px;
+        }
+      }
+      ion-card-title{
+        border-bottom: 1px solid theme-colors('blendModes', 'primary') !important;
+      }
+      [bottom-border]{
+        border-bottom: 1px dotted theme-colors('textColors', 'secondary') !important;
+      } 
+      .block-next {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ServiceHistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ServiceHistory</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content background-mech>
+  <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4>
+          <ion-card text-left *ngFor="let temp of data">
+            <!--Card descriptiom-->
+            <ion-card-content >
+                  <ion-list tab-16>
+                      <ion-item>
+                          <h6 item-start class="example-h5">Order date:</h6>
+                          <!--Card Subtitle-->
+                          <p item-end class="example-p">{{temp.sdate}} / {{temp.stime}}</p>
+                      </ion-item>
+                      <ion-item>
+                          <h6 item-start class="example-h5">Vehicle:</h6>
+                          <!--Card Subtitle-->
+                          <p item-end class="example-p">{{temp.make}} {{temp.model}}</p>
+                      </ion-item>
+                      <ion-item>
+                          <h6 item-start class="example-h5">Mechanic:</h6>
+                          <!--Card Subtitle-->
+                          <p item-end class="example-p">John jack</p>
+                        </ion-item>
+                      <ion-item>
+                            <h6 item-start class="example-h5">Order Status:</h6>
+                            <!--Card Subtitle-->
+                            <p item-end class="example-p">{{temp.status}}</p>
+                      </ion-item>
+                      <ion-item>
+                          <h6 item-start class="example-h5">Cost:</h6>
+                          <!--Card Subtitle-->
+                          <p item-end class="example-p">{{temp.value}}</p>
+                      </ion-item>
+                  </ion-list>
+                  <ion-row>
+                          <ion-col col-12>
+                               <!--Card Title-->
+                               <h6 class="example-h5">Type of Service:</h6>
+                               <!--Card Subtitle-->
+                               <p class="example-p">{{temp.oil_change}}</p>
+                           </ion-col>
+                  </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
